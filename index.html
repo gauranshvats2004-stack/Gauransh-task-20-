@@ -174,10 +174,10 @@
                 </div>
                 <div class="innercontent2">
                     <div class="input">
-                    <input type="text" name="" id="" placeholder="Full Name">
-                    <input type="text" placeholder="Email">
+                    <input type="text" id="namecnt" placeholder="Full Name">
+                    <input type="text" id="emailcnt" placeholder="Email">
                     </div>
-                    <button type="submit">Subscribe</button>
+                    <button type="submit" id="contactbtn">Subscribe</button>
                 </div>
             </div>
             <div class="main2content3">
@@ -206,6 +206,12 @@
             </div>
         </div>
     </main3>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+emailjs.init("wvjJiC89T1RoFlu6N");
+</script>
 <script src="script.js"></script>
+
+
 </body>
 </html>
