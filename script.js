@@ -97,18 +97,42 @@ else{
 const form=document.getElementById('form')
 const p=document.getElementById(`p`)
 form.addEventListener('submit',function(event){
+    const params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("Ph").value,
+    total: total
+};
+    event.preventDefault();
     if(serialno==0){
          p.innerHTML="ⓘ Add items First"
         p.style.color="Red"
-        form.event=""
 
     }else{
+    emailjs.send(
+    "service_qqpsao8",
+    "template_6medxll",
+    params
+)
      p.innerHTML="Email has been sent to you"
     p.style.color="Green"
+    form.reset();
     }
 
     setTimeout(function() {
         p.innerHTML = "";
-
     }, 2000);
     })
+
+const contactbtn=document.getElementById(`contactbtn`)
+contactbtn.addEventListener('click',function(){
+    const name=document.getElementById("namecnt").value
+    const email= document.getElementById("emailcnt").value
+    if(name==""||email==""){
+        alert('Enter your name and your email')
+    }else alert('Your Email has been recieved our team member will contact you shortly.')
+})
+
+
+
+
